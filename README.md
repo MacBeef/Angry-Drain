@@ -6,9 +6,9 @@ Game made with processing, gonna be horrible
 ------------------------
 This game is made with the processing IDE.
 
-Angry Drain is my first proper game.
-prcocessing is not a game engine, 
-so I figure if I can make a game in this, I can make one in anything.
+Angry Drain is my first proper game. /n
+prcocessing is not a game engine, /n
+so I figure if I can make a game in this, I can make one in anything. /n
 
 #### This game has a few goals:
 ◌ Up to 4 player multiplayer
