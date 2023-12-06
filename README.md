@@ -1,25 +1,24 @@
 # Angry-Drain
 Game made with processing, gonna be horrible
 
-———————————————————————————————————————
-## Angry Drain the game
-------------------------
+——————————————————————————————————————— <br>
 This game is made with the processing IDE.
-
-Angry Drain is my first proper game. /n
-prcocessing is not a game engine, /n
-so I figure if I can make a game in this, I can make one in anything. /n
+<br>
+Angry Drain is my first proper game. <br>
+prcocessing is not a game engine, <br>
+so I figure if I can make a game in this, I can make one in **anything**. <br>
 
 #### This game has a few goals:
-◌ Up to 4 player multiplayer
-◌ At least 3 different enemies
-◌ Final boss
-◌ Loot / inventory
-◌ Basic UI 
-
+◌ Up to 4 player multiplayer <br>
+◌ At least 3 different enemies <br>
+◌ Final boss <br> 
+◌ Loot / inventory <br>
+◌ Basic UI <br>
+<br>
 #### And if I'm able I want to add:
-◌ Animations
-◌ Enemy AI
-◌ A shop
-◌ Levels
+◌ Animations <br>
+◌ Enemy AI <br>
+◌ A shop <br>
+◌ Levels <br>
+<br>
 ———————————————————————————————————————
