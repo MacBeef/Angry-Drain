@@ -30,7 +30,6 @@ void introScreen() {
 }
 
 void introScreenButton(float placement, String type) {
-  
   noStroke();
   rectMode(CENTER);
   fill(180);

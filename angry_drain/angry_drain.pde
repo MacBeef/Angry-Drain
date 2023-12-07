@@ -5,17 +5,30 @@ String optionState;
 void setup(){
   //Game state
   gameState = "introscreen";
-  optionState = "1";
+  optionState = "Audio";
   
-  //Option menu
-  optionMenuQuitBoxSize = width/25;
+  //Option menu quit boxes
   optionMenuQuitBoxPlacementWidth = width/12;
   
   //General option menu boxes
-  optionMenuBoxPlacementHeight = height/8;
-  optionMenuBoxPlacementWidth = width/11;
   optionMenuBoxSpace = width/40;
-  optionMenuBoxSizeWidth = width/20;
+  optionMenuBoxSizeWidth = width/6;
+  optionMenuBoxSizeHeight = width/25;
+  optionMenuBoxPlacementHeight = height/8;
+  optionMenuBoxPlacementWidth = (optionMenuQuitBoxPlacementWidth + optionMenuBoxSizeWidth/1.5);
+  
+  //color change for whether button pressed in options menu
+  unpressedButtonColor = 255;
+  pressedButtonColor = 200;
+  optionColor1 = unpressedButtonColor;
+  optionColor2 = unpressedButtonColor;
+  optionColor3 = unpressedButtonColor;
+  
+  //the different box positions
+  boxPos1 = 1.2;
+  boxPos2 = 2.1;
+  boxPos3 = 3;
+  boxPos4 = 3.9;
   
   //Introscreen menu buttons
   placementSP = 2.5;
@@ -32,5 +45,5 @@ void setup(){
 
 void draw(){
   setGameState(gameState);
-  optionMenuState(optionState);
+  optionMenuState();
 }

@@ -8,11 +8,11 @@ void mousePressed() {
   if (gameState == "introscreen") {
     //Redirects to specific page if you press a button
     if ((mouseX >= width/2 - buttonWidth/2  && mouseX <= width/2 + buttonWidth/2) &&
-      (mouseY >= height/placementSP - buttonHeight/2  && mouseY <= height/placementSP + buttonHeight/2) 
+      (mouseY >= height/placementSP - buttonHeight/2  && mouseY <= height/placementSP + buttonHeight/2)
       && (!inOptions) && (gameState == "introscreen")) {
       gameState = "singleplayer";
     } else if ((mouseX >= width/2 - buttonWidth/2  && mouseX <= width/2 + buttonWidth/2) &&
-      (mouseY >= height/placementMP - buttonHeight/2  && mouseY <= height/placementMP + buttonHeight/2) 
+      (mouseY >= height/placementMP - buttonHeight/2  && mouseY <= height/placementMP + buttonHeight/2)
       && (!inOptions) && (gameState == "introscreen")) {
       gameState = "multiplayer";
     } else if ((mouseX >= width/2 - buttonWidth/2  && mouseX <= width/2 + buttonWidth/2) &&
@@ -22,13 +22,22 @@ void mousePressed() {
     }
   }
   //Option interface
-  if (inOptions){
+  if (inOptions) {
     //This is the quit button for the options interface
-    if((mouseX >= optionMenuQuitBoxPlacementWidth - optionMenuQuitBoxSize/2) 
-    && (mouseX <= optionMenuQuitBoxPlacementWidth + optionMenuQuitBoxSize/2) 
-    && (mouseY >= optionMenuBoxPlacementHeight - optionMenuQuitBoxSize/1.5 
-    && (mouseY <= optionMenuBoxPlacementHeight + optionMenuQuitBoxSize/4))){
+    if ( (mouseX >= optionMenuQuitBoxPlacementWidth - optionMenuBoxSizeHeight/2)
+      && (mouseX <= optionMenuQuitBoxPlacementWidth + optionMenuBoxSizeHeight/2)
+      && (mouseY >= optionMenuBoxPlacementHeight - optionMenuBoxSizeHeight/1.5
+      && (mouseY <= optionMenuBoxPlacementHeight + optionMenuBoxSizeHeight/4))) {
       inOptions = false;
-    } 
+      optionState ="Audio";
+      } else if(optionSwicthMouse(boxPos1)){
+              optionState = "Audio";
+      }else if(optionSwicthMouse(boxPos2)){
+              optionState = "2";
+      }else if(optionSwicthMouse(boxPos3)){
+              optionState = "3";
+      }else if(optionSwicthMouse(boxPos4)){
+              optionState = "4";
+      }
+    }
   }
-}
