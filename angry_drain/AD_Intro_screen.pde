@@ -1,3 +1,9 @@
+/*
+I have added the house button clicks in General,
+ I didn't put them here due to me needing to use mousePressed()
+ for other purposes so didn't want it to be here arbitrarily.
+*/
+
 //initialization
 float placementSP;
 float placementMP;
@@ -56,9 +62,3 @@ void introScreenOptions() {
   String type = "Options";
   introScreenButton(placementOP, type);
 }
-
-/*
-I have added the house button clicks in General,
- I didn't put them here due to me needing to use mousePressed()
- for other purposes so didn't want it to be here arbitrarily.
- */

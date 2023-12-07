@@ -2,7 +2,7 @@
  This page is for general things, that might be needed for many different purposes.
  Things such as mouseClicked(), keyPressed() etc.
  */
-
+ 
 void mousePressed() {
   // Intro screen button redirection
   if (gameState == "introscreen") {
@@ -23,7 +23,8 @@ void mousePressed() {
   }
   //Option interface
   if (inOptions) {
-    //This is the quit button for the options interface
+    
+    //This is the quit button for the options interface and the button interface
     if ( (mouseX >= optionMenuQuitBoxPlacementWidth - optionMenuBoxSizeHeight/2)
       && (mouseX <= optionMenuQuitBoxPlacementWidth + optionMenuBoxSizeHeight/2)
       && (mouseY >= optionMenuBoxPlacementHeight - optionMenuBoxSizeHeight/1.5

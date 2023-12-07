@@ -43,12 +43,15 @@ void optionMenu() {
     optionMenuBoxPlacementHeight);
   rect(optionMenuQuitBoxPlacementWidth, optionMenuBoxPlacementHeight -optionMenuBoxSizeHeight/4,
     optionMenuBoxSizeHeight, optionMenuBoxSizeHeight);
-
+  
   //boxes
   menuBoxes(boxPos1, "Audio", optionColor1);
   menuBoxes(boxPos2, "General", optionColor2);
   menuBoxes(boxPos3, "wow", optionColor3);
   menuBoxes(boxPos4, "baddie", optionColor4);
+  
+  //Severing line
+  rect(width/2, height/6, width*0.905, 5);
 }
 
 void menuBoxes(float positioning, String menuName, int optionColor) {
