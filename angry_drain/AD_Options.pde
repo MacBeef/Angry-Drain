@@ -51,23 +51,6 @@ void optionMenu() {
   menuBoxes(boxPos4, "baddie", optionColor4);
 }
 
-void optionAudio() {
-  fill(0);
-  text("hello", width/2, height/2);
-}
-void option2() {
-  fill(0);
-  text("hello", width/2, height/2);
-}
-void option3() {
-  fill(0);
-  text("hello", width/2, height/2);
-}
-void option4() {
-  fill(0);
-  text("hello", width/2, height/2);
-}
-
 void menuBoxes(float positioning, String menuName, int optionColor) {
   fill(optionColor);
   rectMode(CENTER);
@@ -81,6 +64,23 @@ void menuBoxes(float positioning, String menuName, int optionColor) {
     optionMenuBoxPlacementHeight);
 }
 
+void optionAudio() {
+  fill(0);
+  text("hello", width/2, height/2);
+}
+void option2() {
+  fill(0);
+  text("2", width/2, height/2);
+}
+void option3() {
+  fill(0);
+  text("3", width/2, height/2);
+}
+void option4() {
+  fill(0);
+  text("4", width/2, height/2);
+}
+
 void menuBoxSwitch() {
   switch (optionState) {
   case "Audio":
@@ -91,18 +91,21 @@ void menuBoxSwitch() {
     optionColor4 = unpressedButtonColor;
     break;
   case "2":
+    option2();
     optionColor1 = unpressedButtonColor;
     optionColor2 = pressedButtonColor;
     optionColor3 = unpressedButtonColor;
     optionColor4 = unpressedButtonColor;
     break;
   case "3":
+    option3();
     optionColor1 = unpressedButtonColor;
     optionColor2 = unpressedButtonColor;
     optionColor3 = pressedButtonColor;
     optionColor4 = unpressedButtonColor;
     break;
   case "4":
+    option4();
     optionColor1 = unpressedButtonColor;
     optionColor2 = unpressedButtonColor;
     optionColor3 = unpressedButtonColor;
