@@ -1,5 +1,4 @@
 //initialization
-
 float placementSP;
 float placementMP;
 float placementOP;

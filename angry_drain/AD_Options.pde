@@ -1,8 +1,14 @@
 boolean inOptions;
+
 //Quit box
 float optionMenuQuitBoxSize;
 float optionMenuQuitBoxPlacementWidth;
+
+//General option menu boxes
 float optionMenuBoxPlacementHeight;
+float optionMenuBoxPlacementWidth;
+float optionMenuBoxSpace;
+float optionMenuBoxSizeWidth;
 
 void optionMenuState(String optionState) {
   if (inOptions) {
