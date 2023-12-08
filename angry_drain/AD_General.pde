@@ -2,7 +2,7 @@
  This page is for general things, that might be needed for many different purposes.
  Things such as mouseClicked(), keyPressed() etc.
  */
- 
+
 void mousePressed() {
   // Intro screen button redirection
   if (gameState == "introscreen") {
@@ -23,7 +23,7 @@ void mousePressed() {
   }
   //Option interface
   if (inOptions) {
-    
+
     //This is the quit button for the options interface and the button interface
     if ( (mouseX >= optionMenuQuitBoxPlacementWidth - optionMenuBoxSizeHeight/2)
       && (mouseX <= optionMenuQuitBoxPlacementWidth + optionMenuBoxSizeHeight/2)
@@ -31,14 +31,14 @@ void mousePressed() {
       && (mouseY <= optionMenuBoxPlacementHeight + optionMenuBoxSizeHeight/4))) {
       inOptions = false;
       optionState ="Audio";
-      } else if(optionSwicthMouse(boxPos1)){
-              optionState = "Audio";
-      }else if(optionSwicthMouse(boxPos2)){
-              optionState = "2";
-      }else if(optionSwicthMouse(boxPos3)){
-              optionState = "3";
-      }else if(optionSwicthMouse(boxPos4)){
-              optionState = "4";
-      }
+    } else if (optionSwicthMouse(boxPos1)) {
+      optionState = "Audio";
+    } else if (optionSwicthMouse(boxPos2)) {
+      optionState = "2";
+    } else if (optionSwicthMouse(boxPos3)) {
+      optionState = "3";
+    } else if (optionSwicthMouse(boxPos4)) {
+      optionState = "4";
     }
   }
+}
