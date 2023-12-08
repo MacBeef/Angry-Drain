@@ -2,6 +2,7 @@
  This page is for general things, that might be needed for many different purposes.
  Things such as mouseClicked(), keyPressed() etc.
  */
+ String gameState;
 
 void mousePressed() {
   // Intro screen button redirection
@@ -14,7 +15,7 @@ void mousePressed() {
     } else if ((mouseX >= width/2 - buttonWidth/2  && mouseX <= width/2 + buttonWidth/2) &&
       (mouseY >= height/placementMP - buttonHeight/2  && mouseY <= height/placementMP + buttonHeight/2)
       && (!inOptions) && (gameState == "introscreen")) {
-      gameState = "multiplayer";
+      gameState = "startUpMultiplayer";
     } else if ((mouseX >= width/2 - buttonWidth/2  && mouseX <= width/2 + buttonWidth/2) &&
       (mouseY >= height/placementOP - buttonHeight/2  && mouseY <= height/placementOP + buttonHeight/2)
       && (!inOptions) && (gameState == "introscreen")) {
@@ -41,4 +42,17 @@ void mousePressed() {
       optionState = "4";
     }
   }
+}
+
+void button(float placementX, float placementY, String type) {
+  noStroke();
+  rectMode(CENTER);
+  fill(180);
+  rect(placementX, placementY + height/60, buttonWidth, buttonHeight, 30);
+  fill(255);
+  rect(placementX, placementY, buttonWidth, buttonHeight, 30);
+  fill(0);
+  textAlign(CENTER);
+  textSize(width/45);
+  text(type, placementX, placementY+height/55);
 }

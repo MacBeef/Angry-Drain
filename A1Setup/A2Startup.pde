@@ -1,9 +1,3 @@
-/*
-I have added the house button clicks in General,
- I didn't put them here due to me needing to use mousePressed()
- for other purposes so didn't want it to be here arbitrarily.
-*/
-
 //initialization
 float placementSP;
 float placementMP;
@@ -14,7 +8,7 @@ float buttonHeight;
 void setGameState(String state) {
   if (state == "introscreen") {
     introScreen();
-  } else if (state == "multiplayer") {
+  } else if (state == "startUpMultiplayer") {
     startUpMultiplayer();
   } else if (state == "singleplayer") {
     startUpSingleplayer();
@@ -35,30 +29,19 @@ void introScreen() {
   introScreenOptions();
 }
 
-void introScreenButton(float placement, String type) {
-  noStroke();
-  rectMode(CENTER);
-  fill(180);
-  rect(width/2, height/placement + height/60, buttonWidth, buttonHeight, 30);
-  fill(255);
-  rect(width/2, height/placement, buttonWidth, buttonHeight, 30);
-  fill(0);
-  textAlign(CENTER);
-  textSize(60);
-  text(type, width/2, height/placement + height/65);
-}
+
 
 void introScreenSingleplayer() {
   String type = "Singleplayer";
-  introScreenButton(placementSP, type);
+  button(width/2, height/placementSP, type);
 }
 
 void introScreenMultiplayer() {
   String type = "Multiplayer";
-  introScreenButton(placementMP, type);
+  button(width/2, height/placementMP, type);
 }
 
 void introScreenOptions() {
   String type = "Options";
-  introScreenButton(placementOP, type);
+  button(width/2, height/placementOP, type);
 }

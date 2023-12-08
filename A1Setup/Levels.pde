@@ -1,0 +1,2 @@
+float spawnLocationX;
+float spawnLocationY;

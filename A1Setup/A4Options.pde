@@ -2,14 +2,8 @@ boolean inOptions;
 //colors for whether buttons are pressed
 int unpressedButtonColor;
 int pressedButtonColor;
-int optionColor1;
-int optionColor2;
-int optionColor3;
-int optionColor4;
-float boxPos1;
-float boxPos2;
-float boxPos3;
-float boxPos4;
+int optionColor1, optionColor2, optionColor3, optionColor4;
+float boxPos1, boxPos2, boxPos3, boxPos4;
 //Quit box
 float optionMenuQuitBoxPlacementWidth;
 //General option menu boxes
@@ -18,6 +12,8 @@ float optionMenuBoxPlacementWidth;
 float optionMenuBoxSpace;
 float optionMenuBoxSizeWidth;
 float optionMenuBoxSizeHeight;
+
+String optionState;
 
 void optionMenuState() {
   if (inOptions) {
