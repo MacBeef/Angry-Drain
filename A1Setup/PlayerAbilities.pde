@@ -21,6 +21,11 @@ void player() {
   } else {
     fill(255);
   }
+  if (playerHP[player]<= 0){
+  fill(0);
+  playerSPD[player]= 0;
+  }
+  
   rect(playerX[player], playerY[player], playerSize, playerSize);
 
   if (keys['a'] || keyCode == LEFT) {
@@ -35,6 +40,12 @@ void player() {
   if (keys['s'] || keyCode == DOWN) {
     playerY[player] += playerSPD[player];
   }
+
+  fill(255);
+  rect(playerX[player], playerY[player], playerSize/4, playerSize*4/5);
+  fill(0);
+  rect(playerX[player], playerY[player], playerSize/4, (playerHP[player]/maxHP[player])*(playerSize*4/5));
+  
 }
 
 boolean collission(float[] target) {
@@ -42,7 +53,7 @@ boolean collission(float[] target) {
   playerHitbox[1] = playerX[player] + playerSize/2;
   playerHitbox[2] = playerY[player] - playerSize/2;
   playerHitbox[3] = playerY[player] + playerSize/2;
-  
+
   if ((target[0] <= playerHitbox[0] || target[0] <= playerHitbox[1])
     && (target[1] >= playerHitbox[1] || target[1] >= playerHitbox[0])
     && (target[2] <= playerHitbox[2] || target[2] <= playerHitbox[3])

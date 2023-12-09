@@ -6,17 +6,17 @@ void setup() {
   buttonHeight = height/13;
   surface.setTitle("Angry Drain; return of drainage");
   size(1920, 1080);
-  
+
   //Game state
   gameState = "introscreen";
   optionState = "Audio";
-  
+
   //Setup/intro screen menu buttons
   placementSP = 2.5;
   placementMP = 1.9;
   placementOP = 1.53;
   //------------------------------------------------
-  
+
   //------------------------------------------------
   //OPTIONS
   //Option menu quit boxes
@@ -42,36 +42,35 @@ void setup() {
   boxPos3 = 3;
   boxPos4 = 3.9;
   //------------------------------------------------
-  
+
   //------------------------------------------------
   //PLAYER
   spawnLocationY = height/2;
   spawnLocationX = width/2;
   playerX[player] = spawnLocationX;
   playerY[player] = spawnLocationY;
+  maxHP[player] = 25;
   playerHP[player] = maxHP[player];
   playerDMG[player] = 2;
   playerAPS[player] = 1;
   playerSPD[player] = 2;
   playerSize = width/45;
-  
-  
+
+
   //------------------------------------------------
-  
+
   //------------------------------------------------
   //GAME DIFFICULTY
-  
+
   //------------------------------------------------
-  
+
   //------------------------------------------------
   //MULTIPLAYER
-  
+
   //------------------------------------------------
-  
+
   //------------------------------------------------
   //SINGLEPLAYER
-  
+
   //------------------------------------------------
-  
-  
 }

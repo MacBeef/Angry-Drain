@@ -66,5 +66,6 @@ void wallMaterial() {
   if (keys['s'] || keyCode == DOWN) {
     playerY[player] -= playerSPD[player];
   }
+  playerHP[player]--;
 }
 //cohession??
