@@ -1,4 +1,4 @@
-boolean[] keys = new boolean[1256];
+boolean[] keys = new boolean[256];
 byte player = 0;
 
 float[] playerX = new float[4];
@@ -37,16 +37,12 @@ void player() {
   }
 }
 
-boolean playerCollission(float[] target) {
-  playerHitbox[0] = playerX[player] - playerSize/2;
-  playerHitbox[1] = playerX[player] + playerSize/2;
-  playerHitbox[2] = playerY[player] - playerSize/2;
-  playerHitbox[3] = playerY[player] + playerSize/2;
-  
+boolean collission(float[] target) {
   if ((target[0] <= playerHitbox[0] || target[0] <= playerHitbox[1])
     && (target[1] >= playerHitbox[1] || target[1] >= playerHitbox[0])
     && (target[2] <= playerHitbox[2] || target[2] <= playerHitbox[3])
     && (target[3] >= playerHitbox[3] || target[3] >= playerHitbox[2])) {
+    materialDetector(target[4]);
     return true;
   }
   return false;

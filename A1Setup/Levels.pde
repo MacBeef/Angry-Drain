@@ -1,6 +1,6 @@
 float spawnLocationX;
 float spawnLocationY;
-float[] rectpos = new float[4];
+float[] rectpos = new float[5];
 
 
 void level1() {
@@ -9,8 +9,9 @@ void level1() {
   rectpos[1] = width/4 + 100;
   rectpos[2] = height/4 - 100;
   rectpos[3] = height/4 + 100;
+  rectpos[4] = 1.1;
   
-  if(playerCollission(rectpos)){
-    print("ouch");
+  if(collission(rectpos)){
+    print("");
   }
 }

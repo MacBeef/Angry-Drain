@@ -16,26 +16,44 @@
  Object[4] = Material
  
  Within these materials we can define things such as enemy health, loot types etc
- we have different types of materials each reside on a layer, 
+ we have different types of materials each reside on a layer,
  
  LIST OF MATERIALS
  -----------------
  //1 - OBSTACLES
- /*1.1 layer 2:*/ float[] squareWall = new float[5];
- /*1.2 layer 2:*/ float[] LongWall = new float[5];
- /*1.3 layer 0:*/ float[] water = new float[5];
- /*1.4 layer 1 => 2:*/ float[] stairs = new float[5];
- 
- //2 - Characters:
- /*2.1 layer 1: */ float[] playerMaterial = new float[5];
- /*2.2 layer 1: Basic enemy
- /*2.3 layer 1: shooting enemy
- /*2.4 layer 0 => 1: water enemy (jumps out of the water to layer 1 so players can shoot it)
- 
- //3 - LOOT:
- /*3.1 Any accessible layer: chest
+/*1.1 layer 2:     */float wallMaterial = 1.1;
+/*1.2 layer 0:     */float waterMatial = 1.2;
+/*1.3 layer 1 => 2:*/float stairMaterial = 1.3;
+
+//2 - CHARACTERS:
+/*2.1 layer 1:     */float playerMaterial = 2.1;
+/*2.2 layer 1:     */float enemyMaterial = 2.1;
+/*2.3 layer 1:     */float shootingEnemyMaterials = 2.1;
+/*2.4 layer 0 => 1:*/float waterEnemyMaterial = 2.4; 
+/* (jumps out of the water to layer 1 so players can shoot it)*/
+/*2.5 layer -:     */
+
+//3 - LOOT:  
+/*3.1 Any accessible layer: */float chestMaterial = 3.1;
+/*
  --------------------------------------
  */
- 
- //1 OBSTACLES
- 
+
+void materialDetector(float material) {
+  //1 - OBSTACLES
+  if (material == wallMaterial) {
+    wallMaterial();
+  }
+  //2 - CHARACTERS:
+  
+  //3 - LOOT:
+}
+
+//Wall
+float longWallSide;
+float shortWallSide;
+
+void wallMaterial() {
+  print("stop");
+}
+//cohession??
