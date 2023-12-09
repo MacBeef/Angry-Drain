@@ -54,6 +54,17 @@ float longWallSide;
 float shortWallSide;
 
 void wallMaterial() {
-  print("stop");
+  if (keys['a'] || keyCode == LEFT) {
+    playerX[player] += playerSPD[player];
+  }
+  if (keys['d'] || keyCode == RIGHT) {
+    playerX[player] -= playerSPD[player];
+  }
+  if (keys['w'] || keyCode == UP) {
+    playerY[player] += playerSPD[player];
+  }
+  if (keys['s'] || keyCode == DOWN) {
+    playerY[player] -= playerSPD[player];
+  }
 }
 //cohession??
