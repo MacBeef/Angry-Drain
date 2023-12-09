@@ -11,7 +11,5 @@ void level1() {
   rectpos[3] = height/4 + 100;
   rectpos[4] = 1.1;
   
-  if(collission(rectpos)){
-    print("");
-  }
+  collission(rectpos);
 }

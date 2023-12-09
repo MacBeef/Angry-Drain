@@ -38,6 +38,11 @@ void player() {
 }
 
 boolean collission(float[] target) {
+  playerHitbox[0] = playerX[player] - playerSize/2;
+  playerHitbox[1] = playerX[player] + playerSize/2;
+  playerHitbox[2] = playerY[player] - playerSize/2;
+  playerHitbox[3] = playerY[player] + playerSize/2;
+  
   if ((target[0] <= playerHitbox[0] || target[0] <= playerHitbox[1])
     && (target[1] >= playerHitbox[1] || target[1] >= playerHitbox[0])
     && (target[2] <= playerHitbox[2] || target[2] <= playerHitbox[3])

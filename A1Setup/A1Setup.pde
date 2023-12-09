@@ -55,10 +55,7 @@ void setup() {
   playerSPD[player] = 2;
   playerSize = width/45;
   
-  playerHitbox[0] = playerX[player] - playerSize/2;
-  playerHitbox[1] = playerX[player] + playerSize/2;
-  playerHitbox[2] = playerY[player] - playerSize/2;
-  playerHitbox[3] = playerY[player] + playerSize/2;
+  
   //------------------------------------------------
   
   //------------------------------------------------
