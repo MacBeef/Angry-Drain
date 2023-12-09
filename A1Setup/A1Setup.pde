@@ -49,12 +49,15 @@ void setup() {
   spawnLocationX = width/2;
   playerX[player] = spawnLocationX;
   playerY[player] = spawnLocationY;
-  maxHP[player] = 25;
-  playerHP[player] = maxHP[player];
+  playerMaxHP[player] = 25;
+  playerHP[player] = playerMaxHP[player];
   playerDMG[player] = 2;
   playerAPS[player] = 1;
   playerSPD[player] = 2;
   playerSize = width/45;
+  
+  playerHealthBarWidth = playerSize/4;
+  playerHealthBarHeight = playerSize/4*3.5;
 
 
   //------------------------------------------------
