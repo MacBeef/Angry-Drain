@@ -5,8 +5,6 @@ Client p4;
 String input;
 int data[];
 
-
-
 /*
 void multiplayerHost() {
 

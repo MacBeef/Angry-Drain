@@ -1,15 +1,9 @@
 float spawnLocationX;
 float spawnLocationY;
-float[] rectpos = new float[5];
-
+float[] wallTest = new float[5];
+float[] waterTest = new float[5];
 
 void level1() {
-  rect(width/4, height/4, 200, 200);
-  rectpos[0] = width/4 - 100;
-  rectpos[1] = width/4 + 100;
-  rectpos[2] = height/4 - 100;
-  rectpos[3] = height/4 + 100;
-  rectpos[4] = 1.1;
-  
-  collission(rectpos);
+  wall(wallTest, width/2, height/4, longWallSide, shortWallSide);
+  water(waterTest, width/2, height-height/4, longWallSide, shortWallSide);
 }

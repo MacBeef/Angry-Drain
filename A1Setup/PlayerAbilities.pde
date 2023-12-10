@@ -16,6 +16,7 @@ float playerHealthBarHeight;
 
 
 void player() {
+  //player color
   if (player == 0) {
     fill(255, 200, 200);
   } else if (player == 1) {
@@ -25,13 +26,9 @@ void player() {
   } else {
     fill(255);
   }
-  if (playerHP[player]<= 0){
-  fill(0);
-  playerSPD[player]= 0;
-  }
-  
   rect(playerX[player], playerY[player], playerSize, playerSize);
-
+  
+  //Movement
   if (keys['a'] || keyCode == LEFT) {
     playerX[player] -= playerSPD[player];
   }
@@ -44,27 +41,19 @@ void player() {
   if (keys['s'] || keyCode == DOWN) {
     playerY[player] += playerSPD[player];
   }
+  if (playerHP[player]<= 0) {
+    fill(0);
+    playerSPD[player]= 0;
+  }
 
+  //Healthbar
   fill(255);
   rect(playerX[player], playerY[player], playerHealthBarWidth, playerHealthBarHeight);
   fill(0);
-  rect(playerX[player], playerY[player], playerHealthBarWidth, 
-      (playerHP[player]/playerMaxHP[player])*(playerHealthBarHeight));
-  
-}
+  rect(playerX[player], playerY[player], playerHealthBarWidth, (playerHP[player]/playerMaxHP[player])*(playerHealthBarHeight));
 
-boolean collission(float[] target) {
-  playerHitbox[0] = playerX[player] - playerSize/2;
-  playerHitbox[1] = playerX[player] + playerSize/2;
-  playerHitbox[2] = playerY[player] - playerSize/2;
-  playerHitbox[3] = playerY[player] + playerSize/2;
-
-  if ((target[0] <= playerHitbox[0] || target[0] <= playerHitbox[1])
-    && (target[1] >= playerHitbox[1] || target[1] >= playerHitbox[0])
-    && (target[2] <= playerHitbox[2] || target[2] <= playerHitbox[3])
-    && (target[3] >= playerHitbox[3] || target[3] >= playerHitbox[2])) {
-    materialDetector(target[4]);
-    return true;
+  if (playerHP[player] <= 0) {
+    playerHP[player] = 0;
   }
-  return false;
+  
 }
