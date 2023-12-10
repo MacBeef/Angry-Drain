@@ -54,7 +54,7 @@ void wall(float[] objectName, float objectX, float objectY, float objectWidth, f
 //Water
 void water(float[] objectName, float objectX, float objectY, float objectWidth, float objectHeight) {
   //We define the color
-  fill(0, 0, 200);
+  fill(80, 90, 255);
   objectCreation(objectName, objectX, objectY, objectWidth, objectHeight);
   //we define the material type
   objectName[4] = waterMaterial;
