@@ -48,7 +48,9 @@ void materialDetector(float material) {
     waterMaterial();
   }
   //2 - CHARACTERS:
-
+if (material == enemyMaterial){
+enemyMaterial();
+}
   //3 - LOOT:
 }
 
@@ -64,8 +66,8 @@ void stopType() {
     playerY[player] += playerSPD[player];
   }
   if (keys['s']) {
-    playerY[player] -= playerSPD[player];
-  }
+    playerY[player] -= playerSPD[player]; 
+}
 }
 /*
 LIST OF MATERIALS
@@ -74,8 +76,16 @@ LIST OF MATERIALS
  //Wall */
 void wallMaterial() {
   stopType();
+  playerHP[player]--;
 }
 //Water
 void waterMaterial() {
   stopType();
+}
+ //2 - ENTITIES
+//Basic enemy
+void enemyMaterial(){
+stopType();
+stopSelf();
+hurt();
 }

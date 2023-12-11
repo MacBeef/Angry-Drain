@@ -26,8 +26,12 @@ void player() {
   } else {
     fill(255);
   }
+  if (playerHP[player] <= 0) {
+    playerHP[player] = 0;
+    fill(0) ;
+  }
   rect(playerX[player], playerY[player], playerSize, playerSize);
-  
+
   //Movement
   if (keys['a'] || keyCode == LEFT) {
     playerX[player] -= playerSPD[player];
@@ -49,11 +53,6 @@ void player() {
   //Healthbar
   fill(255);
   rect(playerX[player], playerY[player], playerHealthBarWidth, playerHealthBarHeight);
-  fill(0);
+  fill(200, 0, 0);
   rect(playerX[player], playerY[player], playerHealthBarWidth, (playerHP[player]/playerMaxHP[player])*(playerHealthBarHeight));
-
-  if (playerHP[player] <= 0) {
-    playerHP[player] = 0;
-  }
-  
 }

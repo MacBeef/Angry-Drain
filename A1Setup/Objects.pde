@@ -60,3 +60,12 @@ void water(float[] objectName, float objectX, float objectY, float objectWidth, 
   objectName[4] = waterMaterial;
   collission(objectName);
 }
+
+void enemyBasic(float[] objectName, float objectX, float objectY) {
+  //We define the color
+  fill(0);
+  objectCreation(objectName, objectX, objectY, 20, 20);
+  //we define the material type
+  objectName[4] = waterMaterial;
+  collission(objectName);
+}
