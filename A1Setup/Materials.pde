@@ -49,7 +49,7 @@ void materialDetector(float material) {
   }
   //2 - CHARACTERS:
 if (material == enemyMaterial){
-enemyMaterial();
+
 }
   //3 - LOOT:
 }
@@ -84,8 +84,4 @@ void waterMaterial() {
 }
  //2 - ENTITIES
 //Basic enemy
-void enemyMaterial(){
-stopType();
-stopSelf();
-hurt();
-}
+// the function declared in enemyAI "enemyBasic(float X, float Y, float ID);" Will spawn a given enemy at 

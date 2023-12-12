@@ -9,7 +9,8 @@ void level1() {
   background(60, 220, 120);
   player();
   
+  
   wall(wallTest, width/2, height/4, longWallSide, shortWallSide);
   water(waterTest, width/2, height-height/4, longWallSide, shortWallSide);
-  
+  enemyBasic(20,20, 1);
 }
