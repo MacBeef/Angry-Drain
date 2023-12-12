@@ -13,4 +13,6 @@ void level1() {
   wall(wallTest, width/2, height/4, longWallSide, shortWallSide);
   water(waterTest, width/2, height-height/4, longWallSide, shortWallSide);
   enemyBasic(20,20, 1);
+  enemyBasic(580,20, 2);
+  enemyBasic(20,600, 3);
 }

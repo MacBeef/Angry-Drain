@@ -54,7 +54,21 @@ enemyMaxHP[ID] = 10;
   }
   rect(enemyX[ID], enemyY[ID], enemySize, enemySize);
 
-  //Movement
+  followPlayer(ID);
+
+  //Healthbar
+  if (enemyHP[ID]<= 0) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  rect(enemyX[ID], enemyY[ID], enemyHealthBarWidth, enemyHealthBarHeight);
+  fill(0, 0, 0);
+  rect(enemyX[ID], enemyY[ID], enemyHealthBarWidth, (enemyHP[ID]/enemyMaxHP[ID])*(enemyHealthBarHeight));
+}
+
+void followPlayer(int ID){
+//Movement
   if (playerX[player]<enemyX[ID]) {
     enemyX[ID] -= enemySPD[ID];
   }
@@ -68,14 +82,4 @@ enemyMaxHP[ID] = 10;
     enemyY[ID] += enemySPD[ID];
   }
 
-
-  //Healthbar
-  if (enemyHP[ID]<= 0) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  rect(enemyX[ID], enemyY[ID], enemyHealthBarWidth, enemyHealthBarHeight);
-  fill(0, 0, 0);
-  rect(enemyX[ID], enemyY[ID], enemyHealthBarWidth, (enemyHP[ID]/enemyMaxHP[ID])*(enemyHealthBarHeight));
 }
