@@ -18,8 +18,8 @@ byte rd = 3;
 
 //Hurts the player if they're close enough
 void melee(int ID) {
-  if (playerX[player]<enemyX[ID]+20 && playerY[player]<enemyY[ID]+20 &&playerX[player]>enemyX[ID]-20 && playerY[player]>enemyY[ID]-20) {
-    playerHP[player]-=1;
+  if (playerX[player]<enemyX[ID]+40 && playerY[player]<enemyY[ID]+40 &&playerX[player]>enemyX[ID]-40 && playerY[player]>enemyY[ID]-40) {
+    playerHP[player]-=2;
   }
 }
 
